@@ -1,1 +1,3 @@
-Mon premier texte
+Mon premier texte : 
+
+Liste des mots à lister

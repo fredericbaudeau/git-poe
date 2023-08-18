@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>1er Blog</title>
+    </head>
+    <body>
+        <h1>Ma maison </h1>
+    {% load static %}
+	<img width=150px src="{% static 'test.jpg' %}"/img>
+        <p>Bienvenu {{prenom}} sur ma page de blog</p>
+		<h2> liste de montres</h2>
+		<ul>
+		  {% for montre in montres %}
+		  <li> {{montre}} </li>
+		{%endfor%}
+		</ul>
+		        {% if age < 18 %}
+
+  <p> Age : {{age}} =>> PAS OPEN BAR </p>
+
+        {% else %}
+
+  <p> Age : {{age}} =>> OPEN BAR</p>
+
+        {% endif %}
+		<ul>
+		  {% for blogpage in lstBlogPages  %}
+		  <li> {{blogpage.title}}  {{blogpage.content}} </li>
+		{%endfor%}
+		</ul>
+		
+
+    </body>
+</html>
